@@ -281,10 +281,11 @@ endif(HAVE_TCMALLOC)
 find_package(Threads REQUIRED)
 target_link_libraries(leveldb Threads::Threads)
 
+#[[
 add_executable(leveldbutil
   "db/leveldbutil.cc"
 )
-target_link_libraries(leveldbutil leveldb)
+target_link_libraries(leveldbutil leveldb)]]
 
 if(LEVELDB_BUILD_TESTS)
   enable_testing()
